@@ -6,20 +6,15 @@ matrix:
     include:
         - env: ITEST_TARGET=itest_xenial
         - env: ITEST_TARGET=itest_bionic
+        - arch: arm64
+          env: ITEST_TARGET=itest_xenial
+        - arch: arm64
+          env: ITEST_TARGET=itest_bionic
         - env: ITEST_TARGET=itest_buster
         - env: ITEST_TARGET=itest_tox
-        - os: linux-ppc64le
-          env: ITEST_TARGET=itest_buster
         - arch: arm64
-          env: ITEST_TARGET=itest_buster
-        - arch: s390x
-          env: ITEST_TARGET=itest_buster
-    allow_failures:
-        - os: linux-ppc64le
-          env: ITEST_TARGET=itest_buster
+          env: ITEST_TARGET=itest_tox
         - arch: arm64
-          env: ITEST_TARGET=itest_buster
-        - arch: s390x
           env: ITEST_TARGET=itest_buster
 
 
